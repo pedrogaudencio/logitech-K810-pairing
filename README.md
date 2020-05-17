@@ -48,3 +48,15 @@ Start over.
 ---
 
 Stolen from [here](http://devasive.blogspot.ch/2012/11/ubuntu-1204-persistent-bluetooth-pairing.html).
+
+
+Key configuration
+-----------------
+
+`sudo apt-get install build-essential`
+
+`./build.sh`
+
+`sudo ./k810_conf -d /dev/hidraw<X> -f on`
+
+You will have to replace <X> by the hid number that was assigned to your keyboard. Of course there are more clever ways, but just work through the numbers brute force starting with hidraw0. The script is clever enough to detect if it’s not the K810.
